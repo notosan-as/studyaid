@@ -9,8 +9,7 @@ class RecordController extends Controller
 {
     public function index()
     {
-        $records = Record::all()->sortByDesc('created_at');
 
-        return view('index',['records' => $records]);
+        return view('index');
     }
 }

@@ -5,7 +5,8 @@
 
     @guest
     <div class="d-flex align-items-center">
-    <a class="btn btn-outline-light" data-mdb-ripple-color="dark"　href="#" role="button">ログイン</a>
+    <a class="btn btn-outline-light" data-mdb-ripple-color="dark"　
+    href="{{ route('login') }}" role="button">ログイン</a>
     <a class="btn btn-outline-light" data-mdb-ripple-color="dark"　
     href="{{ route('register') }}" role="button">新規登録</a>
     </div>
