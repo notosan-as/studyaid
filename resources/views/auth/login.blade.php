@@ -28,17 +28,20 @@
                 <input class="form-control" type="password" id="password" name="password" required>
                 </div>
 
+                <div class="text-left">
+                <a href="{{ route('password.request') }}" class="card-text">パスワードを再設定する</a>
+                </div>
+
                 <input type="hidden" name="remember" id="remember" value="on">
-
                 <button class="btn btn-block blue-gradient mt-2 mb-2" type="submit">ログイン</button>
-
             </form>
 
+            <small>登録せずに閲覧して見たい方はこちらから</small>
+            <button class="btn btn-block blue-gradient mt-2 mb-2" type="submit">ゲストユーザーでログイン</button>
             <div class="mt-0">
-                <a href="{{ route('register') }}" class="card-text">ユーザー登録はこちら</a>
+                <a href="{{ route('register') }}" class="card-text">新規登録はこちらから</a>
             </div>
-
-                    </div>
+        </div>
                 </div>
             </div>
         </div>
