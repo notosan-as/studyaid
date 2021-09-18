@@ -15,4 +15,30 @@
     </div>
 </div>
 <!-- Background image -->
-studyaidとは
+<div class="p-3">
+    <h4>Studyaidとは</h4>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md">
+        テストテストテストテストテストテストテストテストテストテストテストテスト<br>
+        テストテストテストテストテストテストテストテストテストテストテストテスト<br>
+        テストテストテストテストテストテストテストテストテストテストテストテスト
+        </div>
+        <div class="col-md">
+        テストテストテストテストテストテストテストテストテストテストテストテスト<br>
+        テストテストテストテストテストテストテストテストテストテストテストテスト<br>
+        テストテストテストテストテストテストテストテストテストテストテストテスト
+        </div>
+        <div class="col-md">
+        テストテストテストテストテストテストテストテストテストテストテストテスト<br>
+        テストテストテストテストテストテストテストテストテストテストテストテスト<br>
+        テストテストテストテストテストテストテストテストテストテストテストテスト
+        </div>
+    </div>
+</div>
+<div class="p-3 text-center">
+    <a class="btn btn-primary" href="{{ route('register') }}" role="button">新規登録</a><br>
+    <a class="btn btn-primary" href="{{ route('login') }}" role="button">ログイン</a><br>
+    <a class="btn btn-primary" href="#" role="button">ゲストユーザーでお試しログイン</a><br>
+</div>
