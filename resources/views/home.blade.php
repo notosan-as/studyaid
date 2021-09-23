@@ -20,3 +20,14 @@
     <a href="#" class="btn btn-primary">学習内容の設定</a>
     <a href="#" class="btn btn-primary">みんなの投稿を見る</a>
 </div>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">{{ $calendar->getTitle() }}</div>
+                <div class="card-body">{!! $calendar->render() !!}</div>
+            </div>
+        </div>
+    </div>
+</div>
+@endsection
