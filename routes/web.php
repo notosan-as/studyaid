@@ -14,3 +14,6 @@
 Auth::routes();
 Route::get('/','RecordController@index');
 Route::get('/home','IndexController@index');
+Route::get('/study/add','RecordController@todayStudyadd')->name('study.today_study_add');
+
+Route::resource('/setup','SetupController');

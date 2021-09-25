@@ -11,9 +11,7 @@ class IndexController extends Controller
     {
         $calendar = new CalendarView(time());
 
-        return view('home',[
-            "calendar" => $calendar
-        ]);
+        return view('home',["calendar" => $calendar]);
 
     }
 }
