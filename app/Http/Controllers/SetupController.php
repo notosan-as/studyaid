@@ -4,12 +4,14 @@ namespace App\Http\Controllers;
 
 use App\Item;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class SetupController extends Controller
 {
     public function index()
     {
-        $items = Item::all();
+        $auth = Auth::id();
+        $items = Item::where('user_id',$auth)->orderBy('id')->get();
         return view('setup.study_setup',['items' => $items]);
     }
 
@@ -29,8 +31,8 @@ class SetupController extends Controller
 
     public function show($id)
     {
-        $item = Item::find($id);
-        return view('setup.study_setup_edit',['item' => $item]);
+        $items = Item::find($id);
+        return view('setup.study_setup_edit',['items' => $items]);
     }
 
     public function update(Request $request, $id)

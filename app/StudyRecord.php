@@ -5,10 +5,10 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
-class Record extends Model
+class StudyRecord extends Model
 {
-    public function record():BelongsTo
+    public function studyrecord():BelongsTo
     {
-        return $this->belongsTo('App\Record');
+        return $this->belongsTo('App\StudyRecord');
     }
 }
