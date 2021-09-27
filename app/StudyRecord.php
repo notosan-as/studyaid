@@ -7,8 +7,13 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class StudyRecord extends Model
 {
-    public function studyrecord():BelongsTo
+    public function record(): BelongsTo
     {
-        return $this->belongsTo('App\StudyRecord');
+        return $this->belongsTo('App\Record');
+    }
+
+    public function item(): BelongsTo
+    {
+        return $this->belongsTo('App\Item');
     }
 }

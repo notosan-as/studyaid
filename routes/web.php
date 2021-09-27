@@ -17,3 +17,4 @@ Route::get('/home','IndexController@index');
 
 Route::resource('/study','RecordController')->middleware('auth');
 Route::resource('/setup','SetupController')->middleware('auth');
+Route::resource('/post','PostController')->middleware('auth');

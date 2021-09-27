@@ -49,4 +49,11 @@ class User extends Authenticatable
     {
         return $this->belongsTo('App\User');
     }
+
+    protected $guarded = array('id');
+
+    public function getData()
+    {
+        return $this->name;
+    }
 }

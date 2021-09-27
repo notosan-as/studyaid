@@ -18,7 +18,7 @@
 <div class="d-grid gap-2 col-6 mx-auto">
     <a href="{{ route('study.index') }}" class="btn btn-primary">今日の学習を投稿する</a>
     <a href="{{ route('setup.index') }}" class="btn btn-primary">学習内容の設定</a>
-    <a href="#" class="btn btn-primary">みんなの投稿を見る</a>
+    <a href="{{ route('post.index') }}" class="btn btn-primary">みんなの投稿を見る</a>
 </div>
 <div class="container">
     <div class="row justify-content-center">

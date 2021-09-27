@@ -11,8 +11,8 @@ class Item extends Model
     protected $dates = [];
     public $timestamps = false;
 
-    public function item(): BelongsTo
+    public function user(): BelongsTo
     {
-        return $this->belongsTo('App\Item');
+        return $this->belongsTo('App\User');
     }
 }

@@ -7,8 +7,10 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Record extends Model
 {
-    public function record():BelongsTo
+    protected $guarded = array('id');
+
+    public function user():BelongsTo
     {
-        return $this->belongsTo('App\Record');
+        return $this->belongsTo('App\User');
     }
 }
