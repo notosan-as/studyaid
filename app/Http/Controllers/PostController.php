@@ -38,19 +38,24 @@ class PostController extends Controller
     }
 
     //編集画面表示
-    public function edit()
+    public function edit($id)
     {
-        $post = new Record;
+        $post = Record::find($id);
         return view('post.post_edit',['post' => $post]);
     }
 
     //編集処理
-    public function update()
+    public function update(Request $request,$id)
     {
+        $update = ['memo' => $request->memo ];
+        Record::where('id',$id)->update($update);
+        return redirect()->route('post.index');
     }
 
     //削除処理
-    public function destroy()
+    public function destroy($id)
     {
+        Record::where('id', $id)->delete();
+        return redirect()->route('post.index');
     }
 }

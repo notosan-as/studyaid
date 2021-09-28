@@ -15,10 +15,10 @@
                             @csrf
                             <div class="form-group">
                             <label></label>
-                            <textarea name="body" required class="form-control" rows="16" placeholder="本文">{{ $post->memo }}
+                            <textarea name="memo" required class="form-control" rows="16" placeholder="本文">{{ $post->memo }}
                             </textarea>
                             </div>
-                            <button type="submit" class="btn blue-gradient btn-block">更新</button>
+                            <button type="submit" class="btn blue-gradient btn-block">編集</button>
                         </form>
                     </div>
                 </div>
