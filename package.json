@@ -19,5 +19,9 @@
         "sass-loader": "^7.1.0",
         "vue": "^2.6.11",
         "vue-template-compiler": "^2.6.11"
+    },
+    "dependencies": {
+        "or": "^0.2.0",
+        "yarn": "^1.22.15"
     }
 }

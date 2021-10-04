@@ -1,6 +1,6 @@
 @extends('app')
 
-@section('title','studyaid | mypage')
+@section('title','studyaid | myhome')
 
 @section('content')
 @include('nav')

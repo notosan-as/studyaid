@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Record;
+use App\Like;
 
 class PostController extends Controller
 {
@@ -57,5 +58,34 @@ class PostController extends Controller
     {
         Record::where('id', $id)->delete();
         return redirect()->route('post.index');
+    }
+
+    //いいね処理
+    //いいねが表示されない record_idがnullになる
+    public function like(Request $request,Record $record)
+    {
+        $like = new Like;
+        $like->user_id = $request->user()->id;
+        $like->record_id = $record->id;
+        $like->save();
+
+        // $record->likes()->detach($request->user()->id);
+        // $record->likes()->attach($request->user()->id);
+
+        return [
+            'id' => $record->id,
+            'countLikes' => $record->count_likes,
+        ];
+    }
+
+    //いいね解除処理
+    public function unlike(Request $request,Record $record)
+    {
+        $record->likes()->detach($request->user()->id);
+
+        return [
+            'id' => $record->id,
+            'countLikes' => $record->count_likes,
+        ];
     }
 }

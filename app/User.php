@@ -45,10 +45,10 @@ class User extends Authenticatable
         $this->notify(new PasswordResetNotification($token,new BareMail()));
     }
 
-    public function user():BelongsTo
-    {
-        return $this->belongsTo('App\User');
-    }
+    // public function user():BelongsTo
+    // {
+    //     return $this->belongsTo('App\User');
+    // }
 
     protected $guarded = array('id');
 

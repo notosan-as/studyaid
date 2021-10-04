@@ -67,11 +67,16 @@
         <div class="card-body pt-0 pb-2">
             <div class="card-text">
                 {!! nl2br(e($post->memo)) !!}
+                {{ $post->id }}
             </div>
         </div>
         <div class="card-body pt-0 pb-2 pl-3">
             <div class="card-text">
-            <post-like>
+            <post-like
+            :initial-is-liked-by='@json($post->isLikedBy(Auth::user()))'
+            :initial-count-likes='@json($post->count_likes)'
+            :authorized='@json(Auth::check())'
+            endpoint="{{ route('post.like', ['post' => $post]) }}">
             </post-like>
             </div>
         </div>
