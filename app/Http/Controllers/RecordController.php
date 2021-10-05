@@ -46,5 +46,6 @@ class RecordController extends Controller
     public function destroy()
     {
         //削除
+
     }
 }

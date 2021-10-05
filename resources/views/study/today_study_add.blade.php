@@ -22,7 +22,7 @@
         <tr>
             <th scope="row">{{ $item->item }}</th>
             <td>
-            <input type="text" name="hour" class="form-control">時間
+            <input type="text" name="hour" class="form-control">時間　
             </td>
             <td>
             <input type="text" name="minutes" class="form-control">分

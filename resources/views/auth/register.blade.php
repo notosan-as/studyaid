@@ -38,7 +38,7 @@
             </form>
 
             <a href="{{ route('login.{provider}', ['provider' => 'google']) }}" class="btn btn-block btn-danger">
-            <i class="fab fa-google mr-1"></i>Googleでログイン</a>
+            <i class="fab fa-google mr-1"></i>Googleアカウントで登録</a>
 
             <small>登録せずに閲覧して見たい方はこちらから</small>
             <button class="btn btn-block blue-gradient mt-2 mb-2" type="submit">ゲストユーザーでログイン</button>

@@ -14,6 +14,9 @@
         メールアドレス：　{{ $user->email }}
         </p>
     </div>
+    <div class="text-left">
+    <a href="{{ route('password.request') }}" class="card-text">パスワードを再設定する</a>
+    </div>
 </div>
 <div class="d-grid gap-2 col-6 mx-auto">
     <a href="/home" class="btn btn-primary">マイページに戻る</a>
