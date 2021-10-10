@@ -29,6 +29,8 @@ class PostController extends Controller
         $post->memo = $request->body;
         $post->user_id = $request->user()->id;
         $post->save();
+
+        session()->flash('flash_message', '投稿が完了しました');
         return redirect()->route('post.index');
 
     }
