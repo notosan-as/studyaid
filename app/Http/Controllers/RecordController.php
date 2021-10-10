@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Auth;
 
 class RecordController extends Controller
 {
+    //今日の学習内容の投稿画面
     public function index()
     {
         $auth = Auth::id();
@@ -19,12 +20,37 @@ class RecordController extends Controller
 
     public function create()
     {
-        //作成
+        //Recodeへの登録
+        //itemへの登録
     }
 
-    public function store(Request $request,$id)
+    //今日の学習内容の登録処理
+    public function store(Request $request)
     {
-        //新規登録
+
+        $record = new Record;
+        $record->memo = $request->memo;
+        $record->user_id = $request->user()->id;
+        $record->save();
+        $record_id  = $record->id;
+
+        $itemid = $request->get('itemid');
+        $times = $request->get('time');
+
+        $studies = array_combine($itemid,$times);
+
+        foreach($studies as $key => $study)
+        {
+            $studyrecords = new StudyRecord;
+            $studyrecords->record_id = $record_id;
+            $studyrecords->item_id = $key;
+            $studyrecords->time = $study;
+            $studyrecords->save();
+        }
+
+        $studyrecords = StudyRecord::where('record_id',$record_id)->orderBy('record_id')->get();
+
+        return view('study.today_study_show',['studyrecords' => $studyrecords]);
 
     }
 

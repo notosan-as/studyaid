@@ -65,7 +65,6 @@ class PostController extends Controller
     public function like(Request $request,Record $record)
     {
         $like = new Like;
-        dd($like);
         $like->user_id = $request->user()->id;
         $like->record_id = $record->id;
         $like->save();

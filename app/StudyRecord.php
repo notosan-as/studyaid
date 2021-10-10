@@ -7,6 +7,8 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class StudyRecord extends Model
 {
+    public $timestamps = false;
+
     public function record(): BelongsTo
     {
         return $this->belongsTo('App\Record');
