@@ -18,4 +18,5 @@ class StudyRecord extends Model
     {
         return $this->belongsTo('App\Item');
     }
+
 }

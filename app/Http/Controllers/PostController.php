@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Record;
+use App\StudyRecord;
 use App\Like;
 
 class PostController extends Controller
@@ -13,7 +14,10 @@ class PostController extends Controller
     public function index()
     {
         $posts = Record::all()->sortByDesc('created_at');
-        return view('post.post_index', ['posts' => $posts]);
+        $studies = StudyRecord::all();
+        $records = StudyRecord::get(['record_id']);
+
+        return view('post.post_index', compact('posts','studies','records'));
     }
 
     //投稿画面表示
@@ -29,8 +33,8 @@ class PostController extends Controller
         $post->memo = $request->body;
         $post->user_id = $request->user()->id;
         $post->save();
-
         session()->flash('flash_message', '投稿が完了しました');
+
         return redirect()->route('post.index');
 
     }
@@ -52,6 +56,8 @@ class PostController extends Controller
     {
         $update = ['memo' => $request->memo ];
         Record::where('id',$id)->update($update);
+        session()->flash('flash_message', '編集が完了しました');
+
         return redirect()->route('post.index');
     }
 
@@ -59,35 +65,9 @@ class PostController extends Controller
     public function destroy($id)
     {
         Record::where('id', $id)->delete();
+        session()->flash('flash_message', '投稿を削除しました');
+
         return redirect()->route('post.index');
     }
 
-    //いいね処理
-    //いいねが表示されない record_idがnullになる
-    public function like(Request $request,Record $record)
-    {
-        $like = new Like;
-        $like->user_id = $request->user()->id;
-        $like->record_id = $record->id;
-        $like->save();
-
-        // $record->likes()->detach($request->user()->id);
-        // $record->likes()->attach($request->user()->id);
-
-        return [
-            'id' => $record->id,
-            'countLikes' => $record->count_likes,
-        ];
-    }
-
-    //いいね解除処理
-    public function unlike(Request $request,Record $record)
-    {
-        $record->likes()->detach($request->user()->id);
-
-        return [
-            'id' => $record->id,
-            'countLikes' => $record->count_likes,
-        ];
-    }
 }

@@ -49,6 +49,7 @@ class RecordController extends Controller
         }
 
         $studyrecords = StudyRecord::where('record_id',$record_id)->orderBy('record_id')->get();
+        session()->flash('flash_message', '今日の学習内容を投稿しました');
 
         return view('study.today_study_show',['studyrecords' => $studyrecords]);
 
