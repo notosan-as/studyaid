@@ -1,5 +1,6 @@
 @extends('app')
 
+
 @section('title','studyaid | みんなの投稿')
 
 @section('content')
@@ -8,13 +9,14 @@
 <div class="container">
 @foreach($posts as $post)
 
-    <!-- メモだけの投稿かどうか判定 -->
-    @if(in_array($post->id, (array)$records,true))
+    <!-- 学習時間の投稿があるか判定 -->
+    @if( in_array ( $post->id, array_column( $records, 'record_id' )))
         @include('post.post_form.form_time')
         ある時
-    @endif
+    @else
         @include('post.post_form.form_only')
         ないとき
+    @endif
 
 @endforeach
 </div>

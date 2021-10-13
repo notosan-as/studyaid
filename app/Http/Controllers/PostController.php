@@ -15,7 +15,7 @@ class PostController extends Controller
     {
         $posts = Record::all()->sortByDesc('created_at');
         $studies = StudyRecord::all();
-        $records = StudyRecord::get(['record_id']);
+        $records = StudyRecord::get(['record_id'])->toArray();
 
         return view('post.post_index', compact('posts','studies','records'));
     }
