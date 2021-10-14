@@ -15,6 +15,21 @@
                             @csrf
                             <div class="form-group">
                             <label></label>
+
+                            @if(isset($studies))
+
+                            <div class="card-body pt-0 pb-2">
+                            <ul class="list-group list-group-flush">
+                            @foreach( $studies as $study )
+                                <input type="hidden" name="studyid[]" value="{{ $study->id }}" />
+                                <li class="list-group-item">・{{ $study->item->item }}</li>
+                                <input type="text" name="time[]" class="form-control" value="{{ $study->time }}" />
+                            @endforeach
+                            </ul>
+                            </div>
+
+                            @endif
+
                             <textarea name="memo" required class="form-control" rows="16" placeholder="本文">{{ $post->memo }}
                             </textarea>
                             </div>

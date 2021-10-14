@@ -1,5 +1,5 @@
 @extends('app')
-
+@inject('form','App\Post\PostForm')
 
 @section('title','studyaid | みんなの投稿')
 
@@ -12,10 +12,8 @@
     <!-- 学習時間の投稿があるか判定 -->
     @if( in_array ( $post->id, array_column( $records, 'record_id' )))
         @include('post.post_form.form_time')
-        ある時
     @else
         @include('post.post_form.form_only')
-        ないとき
     @endif
 
 @endforeach

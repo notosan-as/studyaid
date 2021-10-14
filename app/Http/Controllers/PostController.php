@@ -14,10 +14,9 @@ class PostController extends Controller
     public function index()
     {
         $posts = Record::all()->sortByDesc('created_at');
-        $studies = StudyRecord::all();
         $records = StudyRecord::get(['record_id'])->toArray();
 
-        return view('post.post_index', compact('posts','studies','records'));
+        return view('post.post_index', compact('posts','records'));
     }
 
     //投稿画面表示
@@ -48,14 +47,33 @@ class PostController extends Controller
     public function edit($id)
     {
         $post = Record::find($id);
-        return view('post.post_edit',['post' => $post]);
+        $query = StudyRecord::query();
+        $query->where('record_id',$id);
+        $studies = $query->get();
+
+        return view('post.post_edit',compact('post','studies'));
     }
 
     //編集処理
     public function update(Request $request,$id)
     {
-        $update = ['memo' => $request->memo ];
-        Record::where('id',$id)->update($update);
+
+        $memo = $request->get('memo');
+        Record::where('id',$id)->update([ 'memo' => $memo ]);
+
+        $studyid = $request->get('studyid');
+        $times = $request->get('time');
+
+        if(isset( $studyid ))
+        {
+            $studies = array_combine($studyid,$times);
+
+            foreach($studies as $key => $study)
+            {
+                StudyRecord::where('id',$key)->update([ 'time' => $study ]);
+            }
+        }
+
         session()->flash('flash_message', '編集が完了しました');
 
         return redirect()->route('post.index');

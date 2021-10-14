@@ -60,7 +60,7 @@
 
         <div class="card-body pt-0 pb-2">
             <div class="card-text">
-                {!! nl2br(e($post->memo)) !!}メモだけ
+                {!! nl2br(e($post->memo)) !!}
             </div>
         </div>
     </div>
