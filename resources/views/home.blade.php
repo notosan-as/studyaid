@@ -8,7 +8,7 @@
     <div class="card-body">
         <h5 class="card-title">{{ \Carbon\Carbon::now()->format("Y年m月d日") }} / {{ $user->name }}</h5>
         <p class="card-text">
-        トータル学習時間
+        トータル学習時間 {{ $totaltime }}分
         </p>
         <p class="card-text">
         今月の勉強時間
