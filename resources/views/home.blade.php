@@ -11,7 +11,7 @@
         トータル学習時間 {{ $totaltime }}分
         </p>
         <p class="card-text">
-        今月の勉強時間
+        今月の勉強時間 {{ $totalmonthtime }}分
         </p>
     </div>
 </div>

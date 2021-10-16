@@ -7,6 +7,7 @@ use App\Calendar\CalendarView;
 use Illuminate\Support\Facades\Auth;
 use App\Record;
 use App\StudyRecord;
+use Carbon\Carbon;
 
 class IndexController extends Controller
 {
@@ -18,6 +19,8 @@ class IndexController extends Controller
     public function index()
     {
         $calendar = new CalendarView(time());
+
+        $dt = Carbon::now();
         $user = Auth::user();
         $user_id = $user->id;
 
@@ -25,8 +28,9 @@ class IndexController extends Controller
         $records = $records->where('user_id',$user_id);
         $studyrecords = StudyRecord::all();
 
-        $totaltime = 0;
         $time = 0;
+        $totaltime = 0;
+        $totalmonthtime = 0;
 
         //トータル学習時間の計算
         foreach( $studyrecords as $studyrecord )
@@ -37,9 +41,18 @@ class IndexController extends Controller
             {
                 $time = $studyrecord->time;
                 $totaltime = $totaltime + $time;
+
+                $createrecord = Record::find($studyid);
+                $createrecord = $createrecord->created_at;
+                $createrecord = date('m', strtotime($createrecord));
+
+                if($createrecord == $dt->month)
+                {
+                    $totalmonthtime = $totalmonthtime + $time;
+                }
             }
         }
-        return view('home',compact('calendar','user','totaltime'));
+        return view('home',compact('calendar','user','totaltime','totalmonthtime'));
     }
 
 
