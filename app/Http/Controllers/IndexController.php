@@ -11,14 +11,26 @@ use Carbon\Carbon;
 
 class IndexController extends Controller
 {
+    //indexページの表示
     public function toppage()
     {
         return view('index');
     }
 
-    public function index()
+    //home画面の表示
+    public function index(Request $request)
     {
-        $calendar = new CalendarView(time());
+        $date = $request->input('date');
+
+        if($date && preg_match("/^[0-9]{4}-[0-9]{2}$/", $date))
+        {
+            $date = $date . "-01";
+        }else{
+            $date = null;
+        }
+
+        if(!$date)$date = time();
+        $calendar = new CalendarView($date);
 
         $dt = Carbon::now();
         $user = Auth::user();

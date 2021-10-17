@@ -39,7 +39,7 @@ class PostController extends Controller
     }
 
     //個別表示
-    public function show()
+    public function show($id)
     {
     }
 

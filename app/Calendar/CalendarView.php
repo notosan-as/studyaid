@@ -12,11 +12,13 @@ class CalendarView {
         $this->carbon = new Carbon($date);
     }
 
+    //タイトルの取得
     public function getTitle()
     {
         return $this->carbon->format('Y年n月');
     }
 
+    //カレンダーの表示
     function render()
     {
         $html = [];
@@ -77,4 +79,13 @@ class CalendarView {
         return $weeks;
     }
 
+    //次の月を表示する
+	public function getNextMonth(){
+		return $this->carbon->copy()->addMonthsNoOverflow()->format('Y-m');
+	}
+
+    //前の月を表示する
+    public function getPreviousMonth(){
+		return $this->carbon->copy()->subMonthsNoOverflow()->format('Y-m');
+	}
 }
