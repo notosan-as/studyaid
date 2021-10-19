@@ -1,12 +1,12 @@
-<nav class="navbar navbar-expand navbar-dark bg-info">
+<nav class="navbar navbar-expand nav-color">
 <div class="container">
 
     @guest
     <a class="navbar-brand" href="/">Studyaid</a>
     <div class="d-flex align-items-center">
-    <a class="btn btn-outline-light" data-mdb-ripple-color="dark"　
+    <a class="btn btn-nav"
     href="{{ route('login') }}" role="button">ログイン</a>
-    <a class="btn btn-outline-light" data-mdb-ripple-color="dark"　
+    <a class="btn btn-nav"
     href="{{ route('register') }}" role="button">新規登録</a>
     </div>
     @endguest
@@ -16,11 +16,11 @@
     <div class="d-flex align-items-center">
     <form method="POST" action="{{ route('logout') }}">
     @csrf
-    <button class="btn btn-outline-light" data-mdb-ripple-color="dark" type="submit">
+    <button class="btn btn-nav" type="submit">
     ログアウト
     </button>
     </form>
-    <a class="btn btn-outline-light" data-mdb-ripple-color="dark"　href="{{ route('mypage') }}" role="button">設定</a>
+    <a class="btn btn-nav" data-mdb-ripple-color="dark"　href="{{ route('mypage') }}" role="button">設定</a>
     </div>
     @endauth
 

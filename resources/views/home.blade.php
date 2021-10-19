@@ -6,29 +6,37 @@
 @include('nav')
 <div class="card w-75 m-3 mx-auto">
     <div class="card-body">
-        <h5 class="card-title">{{ \Carbon\Carbon::now()->format("Y年m月d日") }} / {{ $user->name }}</h5>
-        <p class="card-text">
-        トータル学習時間 {{ $totaltime }}分
-        </p>
-        <p class="card-text">
-        今月の勉強時間 {{ $totalmonthtime }}分
+        <div class="card-title name"><i class="fas fa-book"></i>
+            　{{ \Carbon\Carbon::now()->format("Y年m月d日") }} 　 {{ $user->name }}さん</div>
+        <p class="card-text time">
+        トータル学習時間 {{ $totaltime }}分　/　今月の勉強時間 {{ $totalmonthtime }}分
         </p>
     </div>
-</div>
-<div class="d-grid gap-2 col-6 mx-auto">
-    <a href="{{ route('study.index') }}" class="btn btn-primary">今日の学習を投稿する</a>
-    <a href="{{ route('setup.index') }}" class="btn btn-primary">学習内容の設定</a>
-    <a href="{{ route('post.index') }}" class="btn btn-primary">みんなの投稿を見る</a>
+    <div class="card-bottom">
+        <a href="{{ route('study.index') }}" class="btn btn-post">今日の学習を投稿する</a>
+        <a href="{{ route('setup.index') }}" class="btn btn-home">学習内容の設定</a>
+        <a href="{{ route('post.index') }}" class="btn btn-home">みんなの投稿を見る</a>
+    </div>
 </div>
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header text-center">
-					<a class="btn btn-outline-secondary float-left" href="{{ url('/home/?date=' . $calendar->getPreviousMonth()) }}">前の月</a>
-					<span>{{ $calendar->getTitle() }}</span>
-					<a class="btn btn-outline-secondary float-right" href="{{ url('/home/?date=' . $calendar->getNextMonth()) }}">次の月</a>
-				</div>
+                <div class="card-header calendar-main">
+
+                    <div class="title-left">
+                    <a href="{{ url('/home/?date=' . $calendar->getPreviousMonth()) }}" class="btn calendar-btn"><i class="fas fa-angle-double-left"></i></a>
+                    </div>
+
+                    <div class="title-center">
+				<span class="calendar-title">{{ $calendar->getTitle() }}</span>
+                    </div>
+
+                    <div class="title-right">
+                    <a href="{{ url('/home/?date=' . $calendar->getNextMonth()) }}" class="btn calendar-btn"><i class="fas fa-angle-double-right"></i></a>
+                    </div>
+
+                </div>
 				<div class="card-body">
 					{!! $calendar->render() !!}
                 </div>
