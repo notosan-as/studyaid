@@ -15,30 +15,31 @@
     </div>
 </div>
 <!-- Background image -->
-<div class="p-3">
-    <h4>Studyaidとは</h4>
-</div>
-<div class="container">
-    <div class="row">
-        <div class="col-md">
-        テストテストテストテストテストテストテストテストテストテストテストテスト<br>
-        テストテストテストテストテストテストテストテストテストテストテストテスト<br>
-        テストテストテストテストテストテストテストテストテストテストテストテスト
-        </div>
-        <div class="col-md">
-        テストテストテストテストテストテストテストテストテストテストテストテスト<br>
-        テストテストテストテストテストテストテストテストテストテストテストテスト<br>
-        テストテストテストテストテストテストテストテストテストテストテストテスト
-        </div>
-        <div class="col-md">
-        テストテストテストテストテストテストテストテストテストテストテストテスト<br>
-        テストテストテストテストテストテストテストテストテストテストテストテスト<br>
-        テストテストテストテストテストテストテストテストテストテストテストテスト
-        </div>
-    </div>
-</div>
+
+<div class="index-title">Studyaidとは？</div>
+<div class="index-main">毎日の学習時間を記録できるサービスです</div>
+
+<section class="blog">
+	<div class="section-inner">
+		<div class="card-items">
+			<div class="card-item">
+				<div class="card-img"><img src="image/index1.png" width="80%"></div>
+				<p>毎日の学習を記録することができます。</p>
+			</div>
+            <div class="card-item">
+				<div class="card-img"><img src="image/index2.png" width="80%"></div>
+				<p>Lorem ipsum dolor, sit amet consectetur adipisicing, elit.</p>
+			</div>
+            <div class="card-item">
+				<div class="card-img"><img src="image/index3.png" width="80%"></div>
+				<p>Lorem ipsum dolor, sit amet consectetur adipisicing, elit.</p>
+			</div>
+		</div>
+	</div>
+</section>
+
 <div class="p-3 text-center">
-    <a class="btn btn-primary" href="{{ route('register') }}" role="button">新規登録</a><br>
-    <a class="btn btn-primary" href="{{ route('login') }}" role="button">ログイン</a><br>
-    <a class="btn btn-primary" href="#" role="button">ゲストユーザーでお試しログイン</a><br>
+    <a class="btn btn-post" href="{{ route('register') }}" role="button">新規登録</a><br>
+    <a class="btn btn-home" href="{{ route('login') }}" role="button">ログイン</a><br>
+    <a class="btn btn-home" href="#" role="button">ゲストユーザーでお試しログイン</a><br>
 </div>

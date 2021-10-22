@@ -13,7 +13,7 @@
         </p>
     </div>
     <div class="card-bottom">
-        <a href="{{ route('study.index') }}" class="btn btn-post">今日の学習を投稿する</a>
+        <a href="{{ route('study.index') }}" class="btn btn-post"><i class="fas fa-edit size"></i>　今日の学習を投稿する</a>
         <a href="{{ route('setup.index') }}" class="btn btn-home">学習内容の設定</a>
         <a href="{{ route('post.index') }}" class="btn btn-home">みんなの投稿を見る</a>
     </div>

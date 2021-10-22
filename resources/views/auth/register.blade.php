@@ -9,7 +9,7 @@
     <div class="mx-auto col col-12 col-sm-11 col-md-9 col-lg-7 col-xl-6">
         <div class="card mt-3">
         <div class="card-body text-center">
-            <h2 class="h3 card-title text-center mt-2">新規登録</h2>
+            <div class="title">新規登録</div>
 
             @include('error_card_list')
 
@@ -34,17 +34,17 @@
                 <label for="password_confirmation">パスワード(確認)</label>
                 <input class="form-control" type="password" id="password_confirmation" name="password_confirmation" required>
                 </div>
-                <button class="btn btn-block blue-gradient mt-2 mb-2" type="submit">新規登録</button>
+                <button class="btn btn-post" type="submit">新規登録</button>
             </form>
 
-            <a href="{{ route('login.{provider}', ['provider' => 'google']) }}" class="btn btn-block btn-danger">
+            <a href="{{ route('login.{provider}', ['provider' => 'google']) }}" class="btn btn-home">
             <i class="fab fa-google mr-1"></i>Googleアカウントで登録</a>
-
-            <small>登録せずに閲覧して見たい方はこちらから</small>
-            <button class="btn btn-block blue-gradient mt-2 mb-2" type="submit">ゲストユーザーでログイン</button>
-
+            <p class="line"></p>
+            <small>登録せずに閲覧して見たい方はこちらから</small><br>
+            <button class="btn btn-home" type="submit">ゲストユーザーでログイン</button>
+            <p class="line"></p>
             <div class="mt-0">
-                <a href="{{ route('login') }}" class="card-text">登録済みの方はこちらからログイン</a>
+                <a href="{{ route('login') }}" class="btn btn-home">登録済みの方はこちらからログイン</a>
             </div>
             </div>
                 </div>

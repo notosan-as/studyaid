@@ -8,18 +8,18 @@
     @csrf
 <div class="card w-75 m-3 mx-auto">
     <div class="card-body">
-        <h5 class="card-title">{{ \Carbon\Carbon::now()->format("Y年m月d日") }}</h5>
+        <h5 class="title">{{ \Carbon\Carbon::now()->format("Y年m月d日") }}</h5>
         <table class="table">
             <thead>
                 <tr>
-                    <th scope="col">学習内容</th>
+                    <th scope="col">　　学習内容</th>
                     <th scope="col">学習時間</th>
                 </tr>
             </thead>
         <tbody>
         @foreach($items as $item)
         <tr>
-            <th scope="row">{{ $item->item }}</th>
+            <th scope="row"><i class="fas fa-book size color"></i>　{{ $item->item }}</th>
             <input type="hidden" name="itemid[]" value="{{ $item->id }}">
             <td><input type="text" name="time[]" value="{{ $item['time'] }}" class="form-control">時間</td>
         </tr>
@@ -36,9 +36,11 @@
         </div>
     </div>
 </div>
-    <button type="submit" value="send" class="btn btn-primary btn-block mb-4">学習内容の投稿</button>
+<div class="btn-mypage">
+<button type="submit" value="send" class="btn btn-post">学習内容の投稿</button>
+</div>
 </form>
-<div class="d-grid gap-2 col-6 mx-auto">
-    <a href="/home" class="btn btn-primary">マイページに戻る</a>
+<div class="btn-mypage">
+    <a href="/home" class="btn btn-home">マイページに戻る</a>
 </div>
 @endsection

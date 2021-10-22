@@ -6,7 +6,7 @@
     <div class="d-flex align-items-center">
     <a class="btn btn-nav"
     href="{{ route('login') }}" role="button">ログイン</a>
-    <a class="btn btn-nav"
+    <a class="btn btn-post"
     href="{{ route('register') }}" role="button">新規登録</a>
     </div>
     @endguest
@@ -20,7 +20,8 @@
     ログアウト
     </button>
     </form>
-    <a class="btn btn-nav" data-mdb-ripple-color="dark"　href="{{ route('mypage') }}" role="button">設定</a>
+    <a class="btn btn-nav" data-mdb-ripple-color="dark"　href="{{ route('mypage') }}" role="button">
+    <i class="fas fa-user-cog size"></i> 設定</a>
     </div>
     @endauth
 

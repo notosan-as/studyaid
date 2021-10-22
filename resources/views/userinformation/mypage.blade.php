@@ -6,19 +6,17 @@
 @include('nav')
 <div class="card w-75 m-3 mx-auto">
     <div class="card-body">
-        <h5 class="card-title">Mypage</h5>
-        <p class="card-text">
-        ユーザー名：　{{ $user->name }}
-        </p>
-        <p class="card-text">
+        <div class="title">ユーザー情報</div>
+        <br>
+        <p class="mypage-text">
+        ユーザー名：　{{ $user->name }} <br>
         メールアドレス：　{{ $user->email }}
         </p>
-    </div>
-    <div class="text-left">
-    <a href="{{ route('password.request') }}" class="card-text">パスワードを再設定する</a>
+        <br>
+        <a href="{{ route('password.request') }}" class="card-text">パスワードを再設定する</a>
     </div>
 </div>
-<div class="d-grid gap-2 col-6 mx-auto">
-    <a href="/home" class="btn btn-primary">マイページに戻る</a>
+<div class="btn-mypage">
+    <a href="/home" class="btn btn-home">マイページに戻る</a>
 </div>
 @endsection

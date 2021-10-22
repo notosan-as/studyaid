@@ -24,7 +24,7 @@ class CalendarView {
         $html = [];
         $html[] = '<div class="calendar">';
         $html[] = '<table class="table">';
-        $html[] = '<thead>';
+        $html[] = '<thead class="calendar-head">';
         $html[] = '<tr>';
         $html[] = '<th>月</th>';
         $html[] = '<th>火</th>';

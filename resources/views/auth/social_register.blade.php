@@ -7,10 +7,9 @@
 <div class="container">
     <div class="row">
         <div class="mx-auto col col-12 col-sm-11 col-md-9 col-lg-7 col-xl-6">
-        <h1 class="text-center"><a class="text-dark" href="/">memo</a></h1>
             <div class="card mt-3">
                 <div class="card-body text-center">
-                <h2 class="h3 card-title text-center mt-2">新規登録</h2>
+                <h2 class="title">新規登録</h2>
                     <div class="card-text">
                         <form method="POST" action="{{ route('register.{provider}', ['provider' => $provider]) }}">
                         @csrf
@@ -24,7 +23,7 @@
                         <label for="email">メールアドレス</label>
                         <input class="form-control" type="text" id="email" name="email" value="{{ $email }}" disabled>
                     </div>
-                    <button class="btn btn-block blue-gradient mt-2 mb-2" type="submit">ユーザー登録</button>
+                    <button class="btn btn-post" type="submit">ユーザー登録</button>
                         </form>
                     </div>
                 </div>

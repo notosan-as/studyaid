@@ -4,13 +4,12 @@
 
 @section('content')
 @include('nav')
-    <div class="container">
+<div class="container">
     <div class="row">
-    <div class="mx-auto col col-12 col-sm-11 col-md-9 col-lg-7 col-xl-6">
-        <h1 class="text-center"><a class="text-dark" href="/">memo</a></h1>
-        <div class="card mt-3">
-        <div class="card-body text-center">
-            <h2 class="h3 card-title text-center mt-2">ログイン</h2>
+        <div class="mx-auto col col-12 col-sm-11 col-md-9 col-lg-7 col-xl-6">
+            <div class="card mt-3">
+                <div class="card-body text-center">
+            <div class="title">ログイン</div>
 
             @include('error_card_list')
 
@@ -28,20 +27,22 @@
                 <input class="form-control" type="password" id="password" name="password" required>
                 </div>
 
-                <div class="text-left">
-                <a href="{{ route('password.request') }}" class="card-text">パスワードを再設定する</a>
+                <div class="text-pass">
+                <a href="{{ route('password.request') }}" class="card-text">パスワードを忘れた方はこちら</a>
                 </div>
 
                 <input type="hidden" name="remember" id="remember" value="on">
-                <button class="btn btn-block blue-gradient mt-2 mb-2" type="submit">ログイン</button>
+                <button class="btn btn-post" type="submit">ログイン</button>
             </form>
-            <a href="{{ route('login.{provider}', ['provider' => 'google']) }}" class="btn btn-block btn-danger">
+            <a href="{{ route('login.{provider}', ['provider' => 'google']) }}" class="btn btn-home">
             <i class="fab fa-google mr-1"></i>Googleアカウントでログイン
             </a>
-            <small>登録せずに閲覧して見たい方はこちらから</small>
-            <button class="btn btn-block blue-gradient mt-2 mb-2" type="submit">ゲストユーザーでログイン</button>
+            <p class="line"></p>
+            <small>登録せずに閲覧して見たい方はこちらから</small><br>
+            <button class="btn btn-home" type="submit">ゲストユーザーでログイン</button>
+            <p class="line"></p>
             <div class="mt-0">
-                <a href="{{ route('register') }}" class="card-text">新規登録はこちらから</a>
+                <a href="{{ route('register') }}" class="btn btn-home">新規登録はこちらから</a>
             </div>
         </div>
                 </div>
