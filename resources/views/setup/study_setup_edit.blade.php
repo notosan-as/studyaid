@@ -5,6 +5,7 @@
 @section('content')
 @include('nav')
 <div class="card w-75 m-3 mx-auto">
+    @include('error_card_list')
     <div class="card-body">
         <div class="title">学習内容の編集</div>
         <br>
@@ -24,4 +25,5 @@
 
     </div>
 </div>
+@include('foot')
 @endsection

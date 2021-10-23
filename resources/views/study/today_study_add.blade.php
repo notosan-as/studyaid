@@ -7,13 +7,14 @@
     <form method="post" action="{{ route('study.store') }}">
     @csrf
 <div class="card w-75 m-3 mx-auto">
+    @include('error_card_list')
     <div class="card-body">
         <h5 class="title">{{ \Carbon\Carbon::now()->format("Y年m月d日") }}</h5>
         <table class="table">
             <thead>
                 <tr>
                     <th scope="col">　　学習内容</th>
-                    <th scope="col">学習時間</th>
+                    <th scope="col">今日の学習時間</th>
                 </tr>
             </thead>
         <tbody>
@@ -21,7 +22,7 @@
         <tr>
             <th scope="row"><i class="fas fa-book size color"></i>　{{ $item->item }}</th>
             <input type="hidden" name="itemid[]" value="{{ $item->id }}">
-            <td><input type="text" name="time[]" value="{{ $item['time'] }}" class="form-control">時間</td>
+            <th><input type="text" name="time[]" value="{{ $item['time'] }}" class="form-control input-time">分</th>
         </tr>
         @endforeach
         </tbody>
@@ -43,4 +44,5 @@
 <div class="btn-mypage">
     <a href="/home" class="btn btn-home">マイページに戻る</a>
 </div>
+@include('foot')
 @endsection

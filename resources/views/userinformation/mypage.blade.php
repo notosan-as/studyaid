@@ -19,4 +19,5 @@
 <div class="btn-mypage">
     <a href="/home" class="btn btn-home">マイページに戻る</a>
 </div>
+@include('foot')
 @endsection

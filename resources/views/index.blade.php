@@ -43,3 +43,5 @@
     <a class="btn btn-home" href="{{ route('login') }}" role="button">ログイン</a><br>
     <a class="btn btn-home" href="#" role="button">ゲストユーザーでお試しログイン</a><br>
 </div>
+@include('foot')
+@endsection

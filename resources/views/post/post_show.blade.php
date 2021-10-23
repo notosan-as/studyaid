@@ -17,10 +17,11 @@
 
 </div>
 
-    <div class="d-grid gap-2 col-6 mx-auto">
-        <a href="{{ route('post.create') }}" class="btn btn-primary">投稿する</a>
+    <div class="btn-mypage">
+        <a href="{{ route('post.create') }}" class="btn btn-post">投稿する</a>
     </div>
-    <div class="d-grid gap-2 col-6 mx-auto">
-        <a href="/home" class="btn btn-primary">マイページに戻る</a>
+    <div class="btn-mypage">
+        <a href="/home" class="btn btn-home">マイページに戻る</a>
     </div>
+    @include('foot')
 @endsection

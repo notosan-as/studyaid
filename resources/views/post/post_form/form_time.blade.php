@@ -1,9 +1,9 @@
 
     <div class="card mt-3">
         <div class="card-body d-flex flex-row">
-            <i class="fas fa-user-circle fa-3x mr-1"></i>
-                <div>
-                    <div class="font-weight-bold">
+            <div class= "form-post">
+                <div class="font-weight-bold">
+                    <i class="fas fa-user-circle"></i>
                     {{ $post->user->getData() }}
                     </div>
                     <div class="font-weight-lighter">
@@ -33,13 +33,12 @@
         <div class="card-body pt-0 pb-2">
             <ul class="list-group list-group-flush">
                 @foreach( $form->posttimeget( $post->id ) as $study )
-                <li class="list-group-item">・{{ $study->item->item }}  / 　{{ $study->time }}分</li>
+                <li class="list-group-item"><i class="fas fa-book size color-blown"></i>　{{ $study->item->item }}　・・・ {{ $study->time }}分</li>
                 @endforeach
             </ul>
         </div>
-
-        <div class="card-body pt-0 pb-2">
-            <div class="card-text">
+        <div class="card-body">
+            <div class="card-text card-memo">
                 {!! nl2br(e($post->memo)) !!}
             </div>
         </div>

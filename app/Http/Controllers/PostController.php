@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Record;
 use App\StudyRecord;
 use App\Like;
+use App\Http\Requests\PostRequest;
 
 class PostController extends Controller
 {
@@ -26,7 +27,7 @@ class PostController extends Controller
     }
 
     //投稿処理
-    public function store(Request $request)
+    public function store(PostRequest $request)
     {
         $post = new Record;
         $post->memo = $request->body;

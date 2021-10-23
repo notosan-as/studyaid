@@ -17,13 +17,14 @@
         </thead>
         <tbody>
         @foreach($items as $item)
-            <tr>
+            <tr class="item-list">
                 <td><i class="fas fa-book size color"></i>　{{ $item->item }}</td>
-                <td><a href="{{ route('setup.show',$item->id) }}" class="btn edit-btn">編集</a></td>
+                <td><a href="{{ route('setup.show',$item->id) }}" class="edit-btn">編集</a></td>
                 <td><form action="{{ route('setup.destroy', $item->id)}}" method="POST">
                 @csrf
                 @method('DELETE')
-                <input type="submit" name="delete" value="削除" class="btn delete-btn"></form></td>
+                <button type="submit" class="delete-btn" name="delete"><i class="fas fa-trash-alt"></i> 削除</button>
+                </form></td>
             </tr>
         @endforeach
         </tbody>
@@ -34,4 +35,5 @@
     <a href="{{ route('setup.create') }}" class="btn btn-post">学習内容を追加する</a>
     <a href="/home" class="btn btn-home">マイページに戻る</a>
 </div>
+@include('foot')
 @endsection

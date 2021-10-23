@@ -1,13 +1,13 @@
 @extends('app')
 
-@section('title','studyaid | myhome')
+@section('title','studyaid | mypage')
 
 @section('content')
 @include('nav')
 <div class="card w-75 m-3 mx-auto">
     <div class="card-body">
         <div class="card-title name"><i class="fas fa-book"></i>
-            　{{ \Carbon\Carbon::now()->format("Y年m月d日") }} 　 {{ $user->name }}さん</div>
+            　{{ \Carbon\Carbon::now()->format("Y年m月d日") }} 　 {{ $user->name }}さんのマイページ</div>
         <p class="card-text time">
         トータル学習時間 {{ $totaltime }}分　/　今月の勉強時間 {{ $totalmonthtime }}分
         </p>
@@ -44,4 +44,5 @@
         </div>
     </div>
 </div>
+@include('foot')
 @endsection

@@ -6,23 +6,25 @@
 @section('content')
     @include('nav')
 
-<div class="container">
-@foreach($posts as $post)
+    <div class="btn-right">
+        <a href="{{ route('post.create') }}" class="btn btn-todaypost"><i class="fas fa-pen-nib size"></i> 投稿する</a>
+    </div>
 
-    <!-- 学習時間の投稿があるか判定 -->
-    @if( in_array ( $post->id, array_column( $records, 'record_id' )))
+    <div class="container">
+        @foreach($posts as $post)
+
+        <!-- 学習時間の投稿があるか判定 -->
+        @if( in_array ( $post->id, array_column( $records, 'record_id' )))
         @include('post.post_form.form_time')
-    @else
+        @else
         @include('post.post_form.form_only')
-    @endif
+        @endif
 
-@endforeach
-</div>
+        @endforeach
+    </div>
 
-    <div class="d-grid gap-2 col-6 mx-auto">
-        <a href="{{ route('post.create') }}" class="btn btn-primary">投稿する</a>
+    <div class="btn-mypage">
+        <a href="/home" class="btn btn-home">マイページに戻る</a>
     </div>
-    <div class="d-grid gap-2 col-6 mx-auto">
-        <a href="/home" class="btn btn-primary">マイページに戻る</a>
-    </div>
+    @include('foot')
 @endsection

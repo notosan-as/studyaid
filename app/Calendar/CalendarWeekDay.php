@@ -50,7 +50,12 @@ class CalendarWeekDay
             }
         }
 
-        return '<p class="day">' . $this->carbon->format("j").
-        '</p><p class="day">' . $today_time. '分</p>';
+        if($today_time === 0)
+        {
+            return '<p class="day">' . $this->carbon->format("j");
+        }else{
+            return '<p class="day">' . $this->carbon->format("j") . '</p><p class="day-time"><i class="fas fa-star color-yellow"></i>' . $today_time. '分</p>';
+        }
+
     }
 }
