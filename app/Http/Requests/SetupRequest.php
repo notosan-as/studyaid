@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class PostRequest extends FormRequest
+class SetupRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,15 +24,14 @@ class PostRequest extends FormRequest
     public function rules()
     {
         return [
-            'body' => 'max:500',
+            'item' => 'required|max:40',
         ];
     }
 
     public function attributes()
     {
         return[
-            'body' => '本文',
-            'time' => '勉強時間',
+            'item' => '学習内容',
         ];
     }
 }

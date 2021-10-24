@@ -56,9 +56,8 @@ class PostController extends Controller
     }
 
     //編集処理
-    public function update(Request $request,$id)
+    public function update(PostRequest $request,$id)
     {
-
         $memo = $request->get('memo');
         Record::where('id',$id)->update([ 'memo' => $memo ]);
 

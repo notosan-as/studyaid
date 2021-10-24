@@ -7,6 +7,7 @@ use App\Item;
 use App\StudyRecord;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Requests\RecordRequest;
 
 class RecordController extends Controller
 {
@@ -19,7 +20,7 @@ class RecordController extends Controller
     }
 
     //今日の学習内容の登録処理
-    public function store(Request $request)
+    public function store(RecordRequest $request)
     {
 
         $record = new Record;

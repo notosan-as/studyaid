@@ -25,7 +25,7 @@
                             @foreach( $studies as $study )
                                 <input type="hidden" name="studyid[]" value="{{ $study->id }}" />
                                 <li>　　<i class="fas fa-book size color"></i>{{ $study->item->item }}</li>
-                                <li><input type="text" name="time[]" class="form-control input-time" value="{{ $study->time }}" />分　　/</li>
+                                <li><input type="number" name="time[]" class="form-control input-time" value="{{ $study->time }}" />分　　/</li>
                             @endforeach
 
                             </ul>

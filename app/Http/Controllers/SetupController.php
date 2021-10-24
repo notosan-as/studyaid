@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Item;
+use App\StudyRecord;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Requests\SetupRequest;
 
 class SetupController extends Controller
 {
@@ -23,7 +25,7 @@ class SetupController extends Controller
     }
 
     //学習内容の追加処理
-    public function store(Request $request)
+    public function store(SetupRequest $request)
     {
         $item = new Item;
         $item->item = $request->item;
@@ -42,7 +44,7 @@ class SetupController extends Controller
     }
 
     //学習内容の編集処理
-    public function update(Request $request, $id)
+    public function update(SetupRequest $request, $id)
     {
         $update = [ 'item' => $request->item ];
         Item::where('id',$id)->update($update);
@@ -54,8 +56,18 @@ class SetupController extends Controller
     //学習内容の削除処理
     public function destroy($id)
     {
-        Item::where('id', $id)->delete();
-        session()->flash('flash_message', '削除しました');
+        $find = StudyRecord::where('item_id',$id)->first();
+
+        if($find){
+
+            session()->flash('flash_message', '学習時間を記録している項目は削除できません');
+            return back();
+
+        }else{
+
+            Item::where('id', $id)->delete();
+            session()->flash('flash_message', '削除しました');
+        }
 
         return redirect()->route('setup.index');
     }
