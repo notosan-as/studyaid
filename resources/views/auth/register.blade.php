@@ -41,7 +41,7 @@
             <i class="fab fa-google mr-1"></i>Googleアカウントで登録</a>
             <p class="line"></p>
             <small>登録せずに閲覧して見たい方はこちらから</small><br>
-            <button class="btn btn-home" type="submit">ゲストユーザーでログイン</button>
+                <a href="{{ route('login.guest') }}" class="btn btn-home">ゲストユーザーでログイン</a>
             <p class="line"></p>
             <div class="mt-0">
                 <a href="{{ route('login') }}" class="btn btn-home">登録済みの方はこちらからログイン</a>

@@ -9,6 +9,10 @@ class StudyRecord extends Model
 {
     public $timestamps = false;
 
+    protected $casts = [
+        'time' => 'integer'
+    ];
+
     public function record(): BelongsTo
     {
         return $this->belongsTo('App\Record');

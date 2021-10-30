@@ -13,7 +13,9 @@
         メールアドレス：　{{ $user->email }}
         </p>
         <br>
+        @if (Auth::id() != 1)
         <a href="{{ route('password.request') }}" class="card-text">パスワードを再設定する</a>
+        @endif
     </div>
 </div>
 <div class="btn-mypage">

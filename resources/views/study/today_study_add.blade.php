@@ -35,10 +35,10 @@
             <label class="form-label" for="form4Example3">メモ</label>
             <textarea class="form-control" name="memo" rows="4"></textarea>
         </div>
+        <div class="btn-mypage">
+        <button type="submit" value="send" class="btn btn-post">学習内容の投稿</button>
+        </div>
     </div>
-</div>
-<div class="btn-mypage">
-<button type="submit" value="send" class="btn btn-post">学習内容の投稿</button>
 </div>
 </form>
 <div class="btn-mypage">

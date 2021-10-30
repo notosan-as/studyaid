@@ -39,7 +39,7 @@
             </a>
             <p class="line"></p>
             <small>登録せずに閲覧して見たい方はこちらから</small><br>
-            <button class="btn btn-home" type="submit">ゲストユーザーでログイン</button>
+                <a href="{{ route('login.guest') }}" class="btn btn-home">ゲストユーザーでログイン</a>
             <p class="line"></p>
             <div class="mt-0">
                 <a href="{{ route('register') }}" class="btn btn-home">新規登録はこちらから</a>

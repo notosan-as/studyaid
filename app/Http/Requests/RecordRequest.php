@@ -16,6 +16,15 @@ class RecordRequest extends FormRequest
         return true;
     }
 
+    protected function prepareForValidation()
+    {
+        $data = $this->validationData();
+
+        $data['time'] = array_map('intval', $data['time']);
+
+        $this->replace($data);
+    }
+
     /**
      * Get the validation rules that apply to the request.
      *
@@ -23,16 +32,17 @@ class RecordRequest extends FormRequest
      */
     public function rules()
     {
-        return [
-            'memo' => 'max:500',
-        ];
-    }
+            return [
+                'memo' => 'max:500',
+                'time.*' => 'integer | between:0,999',
+            ];
+        }
 
-    public function attributes()
-    {
-        return[
-            'memo' => '本文',
-            'time' => '勉強時間',
-        ];
-    }
+        public function attributes()
+        {
+            return[
+                'memo' => '本文',
+                'time.*' => '勉強時間',
+            ];
+        }
 }

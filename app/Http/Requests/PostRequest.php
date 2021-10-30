@@ -16,23 +16,35 @@ class PostRequest extends FormRequest
         return true;
     }
 
-    /**
-     * Get the validation rules that apply to the request.
-     *
-     * @return array
-     */
-    public function rules()
+protected function prepareForValidation()
+{
+    $data = $this->validationData();
+    if(array_key_exists('time', $data))
     {
+        $data['time'] = array_map('intval', $data['time']);
+
+        $this->replace($data);
+    }
+}
+
+/**
+ * Get the validation rules that apply to the request.
+ *
+ * @return array
+ */
+public function rules()
+{
         return [
-            'body' => 'max:500',
+            'memo' => 'max:500',
+            'time.*' => 'integer | between:0,999',
         ];
     }
 
     public function attributes()
     {
         return[
-            'body' => '本文',
-            'time' => '勉強時間',
+            'memo' => '本文',
+            'time.*' => '勉強時間',
         ];
     }
 }

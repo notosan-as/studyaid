@@ -18,12 +18,10 @@
                 <button type="submit" value="send" class="btn btn-post">学習内容を追加する</button>
             </div>
         </form>
-
-        <div class="btn-mypage">
-            <a href="/home" class="btn btn-home">マイページに戻る</a>
-        </div>
-
     </div>
+</div>
+<div class="btn-mypage">
+    <a href="/home" class="btn btn-home">マイページに戻る</a>
 </div>
 @include('foot')
 @endsection
