@@ -14,7 +14,7 @@
     <!-- Material Design Bootstrap -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.11/css/mdb.min.css" rel="stylesheet">
     <!-- original CSS -->
-    <link rel="stylesheet" href="/css/my-sheet.css">
+    <link rel="stylesheet" href="http://studyaid.work/css/my-sheet.css">
 </head>
 
 <body>
@@ -22,7 +22,7 @@
     @yield('content')
     </div>
 
-    <script src="{{ url(mix('js/app.js')) }}"></script>
+    <script src="http://studyaid.work/js/app.js"></script>
     <!-- JQuery -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <!-- Bootstrap tooltips -->
@@ -32,7 +32,7 @@
     <!-- MDB core JavaScript -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.11/js/mdb.min.js"></script>
     <!-- original JavaScript -->
-    <script src="{{ url(asset('js/main.js')) }}"></script>
+    <script src="http://studyaid.work/js/main.js"></script>
 </body>
 
 </html>
