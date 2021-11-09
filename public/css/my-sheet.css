@@ -1,0 +1,452 @@
+/* ページ全体のCSS */
+body{
+	background-color:#fffdf5;
+    font-family: "Meiryo UI","メイリオ";
+}
+
+.size{
+    font-size:1.5em;
+}
+
+.color{
+    color:#FFAFA3;
+}
+
+.color-blown{
+    color:#7a6740;
+}
+
+.color-yellow{
+    color:#f5e582;
+}
+
+.btn-mypage{
+    text-align:center;
+}
+
+.btn-right{
+    text-align:right;
+    padding:0px 20px 0px 0px;
+}
+
+.flash{
+    background-color:#FFAFA3;
+}
+
+.foot{
+    margin-top:30px;
+    background-color:#EFDAB1;
+    font-size:0.5rem;
+    color:#7a6740;
+}
+/* MainページのCSS */
+
+.btn-nav{
+    border-radius: 100vh;
+    background-color:#FFF7D6;
+    color:#76BACB;
+    font-weight: bold;
+}
+
+.btn-nav:hover{
+    color:#4d8491;
+}
+
+.btn-home{
+    border-radius: 100vh;
+    background-color:#76BACB;
+    color:#ffffff;
+    font-weight: bold;
+}
+
+.btn-home:hover{
+    color:#FFF7D6;
+}
+
+.btn-post{
+    border-radius: 100vh;
+    background-color:#FFAFA3;
+    color:#ffffff;
+    font-weight: bold;
+}
+
+.btn-post:hover{
+    color:#FFF7D6;
+}
+
+.nav-color{
+    background-color:#76BACB;
+}
+
+.navbar-brand{
+    font-size: 1.5em;
+    color: #FFF7D6;
+    font-weight: bold;
+}
+
+.navbar-brand:hover{
+    color:#4d8491;
+}
+
+.name {
+    color:#3d6b75;
+    font-size: 1.2em;
+    font-weight: bold;
+    position: relative;
+    padding: 0.5rem 1rem;
+    border-bottom: 3px solid #76BACB;
+}
+
+.name:before {
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 20%;
+    height: 3px;
+    content: '';
+    background: #4d8491;
+}
+
+.time{
+    color:#3d6b75;
+    font-weight: bold;
+}
+
+.card-bottom{
+    margin: 0 auto;
+}
+
+.day-blank {
+	background-color: #efefef;
+}
+.day-sun .day{
+	color:#c94a36;
+}
+.day-sat .day{
+	color:#3280cf;
+}
+
+.calendar-head{
+    border: solid 2px #76BACB;
+}
+
+.calendar table td {
+	padding: 3px;
+    border: solid 2px #76BACB;
+    width:100px;
+    height:70px;
+}
+.calendar table td:before {
+	display: block;
+	float: left;
+	height: 50px;
+	content: "";
+}
+.calendar table td .day {
+	margin-bottom: 0;
+    font-weight: bold;
+}
+
+.calendar table td .day-time {
+	margin-bottom: 0;
+    text-align:center;
+}
+
+.calendar table th {
+    font-weight: bold;
+	text-align: center;
+    border: solid 2px #76BACB;
+}
+
+.calendar-btn {
+    color: #76BACB;
+    background-color: #FFF7D6;
+    font-size: 1.6rem;
+    line-height: 0.5;
+    padding: 0.5rem 0.5rem;
+    letter-spacing: 0.1em;
+}
+.calendar-btn:hover {
+    color: #76BACB;
+    background: #FFF7D6;
+}
+
+.calendar-main{
+    font-weight: bold;
+    background-color:#76BACB;
+    display: flex;
+    justify-content:space-between;
+    align-items:center;
+    padding: 0.2rem 0.2rem;
+}
+
+.calendar-title{
+    color:#FFF7D6;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.title-center{
+    display: inline-block;
+    text-align: center;
+}
+
+/* ログインのCSS */
+.title {
+    border-bottom: 6px double #76BACB;
+    font-weight: bold;
+    font-size:1.5rem;
+    padding:0.5rem 0.5rem;
+    color:#76BACB;
+}
+
+.text-pass{
+    text-align:right;
+}
+
+.line{
+    border-bottom: 1px dashed #76BACB;
+    padding: 0.5rem 0.5rem;
+}
+
+/* indexのCSS */
+.index-title {
+    font-weight: bold;
+    font-size:1.5rem;
+    position: relative;
+    padding: 1rem 1rem;
+    margin:1rem 1rem;
+    color: #fff;
+    border-radius: 5px;
+    background: #76BACB;
+    width:400px;
+}
+
+.index-title:after {
+    position: absolute;
+    bottom: -9px;
+    left: 1em;
+    width: 0;
+    height: 0;
+    content: '';
+    border-width: 10px 10px 0 10px;
+    border-style: solid;
+    border-color: #76BACB transparent transparent transparent;
+}
+
+.index-main{
+    margin:1rem 3rem;
+    color:#525252;
+    letter-spacing: 0.2em;
+    font-family: 'Meiryo UI',sans-serif;
+}
+
+.main-title{
+    color:#454545;
+    font-size:4rem;
+    letter-spacing: 0.1em;
+    text-shadow: 2px 2px 2px silver;
+    font-family: 'Calibri','Avenir Next','San Fransisco',sans-serif;
+}
+
+.main-title-body{
+    color:#454545;
+    letter-spacing: 0.5em;
+    font-family: 'Calibri','Avenir Next','San Fransisco',sans-serif;
+}
+
+section{
+    padding: 50px 0px;
+}
+
+.section-inner{
+    max-width: 100%;
+    width: 1140px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.card-items{
+    display: flex;
+    flex-wrap :wrap;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.blog{
+    padding:0px 0px 100px 0px;
+}
+
+.text-main{
+    font-size: 0.9em;
+    color:#454545;
+    letter-spacing: 0.2em;
+    font-family: 'Meiryo UI',sans-serif;
+}
+
+  /* 3カラムで配置 */
+.card-item{
+    width: calc(33.3% - 24px*2);
+    margin-right: 20px;
+}
+
+.card-item:nth-child(3n){
+    margin-right: 0;
+}
+
+.card-img{
+    height:80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-item p{
+    padding:0.5rem 0.8rem;
+}
+
+/* mypageのcss */
+.mypage-text{
+    font-size:1.0rem
+}
+
+/* 学習内容の設定ページのcss */
+.edit-btn{
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.5;
+    position: relative;
+    display: inline;
+    padding: 0.8rem 2rem;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    text-align: center;
+    vertical-align: middle;
+    text-decoration: none;
+    letter-spacing: 0.1em;
+    border-radius: 0.5rem;
+    background-color: #76BACB;
+}
+
+.edit-btn:hover {
+    color: #fff;
+    background: #8ed0e0;
+}
+
+.item-list{
+    margin:auto;
+}
+
+.item-list td a{
+    color:#fff;
+}
+
+.item-list td button{
+    color:#fff;
+    border: none;
+}
+
+.delete-btn{
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.5;
+    position: relative;
+    display: inline-block;
+    padding: 0.5rem 2rem;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    text-align: center;
+    vertical-align: middle;
+    text-decoration: none;
+    letter-spacing: 0.1em;
+    border-radius: 0.5rem;
+    background-color: #de6666;
+}
+
+.delete-btn:hover {
+    color: #fff;
+    background: #f28383;
+}
+
+.input-time{
+    width: 100px !important;
+    display: inline-block;
+}
+
+/* 投稿ページのcss */
+.btn-todaypost{
+    font-weight: bold;
+    color:#ffffff;
+    border-radius: 50%;
+    line-height: 90px;
+    width: 90px;
+    height: 90px;
+    padding: 0;
+    -webkit-box-shadow: 0 5px 0 #eb9f94;
+    box-shadow: 0 5px 0 #eb9f94;
+    background-color:#FFAFA3;
+}
+
+.btn-todaypost:hover {
+    color:#FFF7D6;
+    -webkit-transform: translate(0, 3px);
+    transform: translate(0, 3px);
+    -webkit-box-shadow: 0 2px 0 #eb9f94;
+    box-shadow: 0 2px 0 #eb9f94;
+}
+
+/* form部分のcss */
+.form-post{
+    color:#7a6740;
+    position: relative;
+    margin-bottom: 0.8em;
+    padding: 0.5rem 3rem;
+    border-radius: 10px;
+    background: #EFDAB1;
+}
+
+.form-post:before,
+.form-post:after {
+    position: absolute;
+    content: '';
+    border-radius: 50%;
+    background: #EFDAB1;
+}
+
+.form-post:before {
+    bottom: -15px;
+    left: 30px;
+    width: 30px;
+    height: 30px;
+}
+
+.form-post:after {
+    bottom: -30px;
+    left: 50px;
+    width: 15px;
+    height: 15px;
+}
+
+.card-memo{
+    padding:0px 0px 0px 20px;
+    color:#7a6740;;
+}
+
+.study-list{
+    display: inline-block;
+    list-style: none;
+}
+
+.study-list li{
+    display: inline;
+}
