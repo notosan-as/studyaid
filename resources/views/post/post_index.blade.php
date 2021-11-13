@@ -21,8 +21,8 @@
             @endif
 
             @endforeach
-
-            {{ $posts->links() }}
+    <br>
+            {{ $posts->links('pagination::default') }}
     </div>
 
     <div class="btn-mypage">
