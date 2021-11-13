@@ -11,7 +11,6 @@
     </div>
 
     <div class="container">
-        <ul class="article-list">
             @foreach($posts as $post)
 
             <!-- 学習時間の投稿があるか判定 -->
@@ -22,8 +21,7 @@
             @endif
 
             @endforeach
-        </ul>
-        <div class="navigation"><a href="/post/page-2.blade.php">続きを表示</a></div>
+
     </div>
 
     <div class="btn-mypage">

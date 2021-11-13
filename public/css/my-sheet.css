@@ -383,20 +383,6 @@ section{
     display: inline-block;
 }
 
-/* 投稿ページのcss */
-/*ローディングが表示されるエリアの設定*/
-#infscr-loading {
-    width:100%;
-    text-align:center;
-    margin:20px auto;
-    }
-
-#infscr-loading img{
-        width:30px;/*ローディング画像のサイズ*/
-    }
-
-
-
 
 .btn-todaypost{
     font-weight: bold;
