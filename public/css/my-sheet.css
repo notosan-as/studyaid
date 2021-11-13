@@ -219,7 +219,7 @@ body{
     color: #fff;
     border-radius: 5px;
     background: #76BACB;
-    width:400px;
+    width:50px;
 }
 
 .index-title:after {
@@ -384,6 +384,20 @@ section{
 }
 
 /* 投稿ページのcss */
+/*ローディングが表示されるエリアの設定*/
+#infscr-loading {
+    width:100%;
+    text-align:center;
+    margin:20px auto;
+    }
+
+#infscr-loading img{
+        width:30px;/*ローディング画像のサイズ*/
+    }
+
+
+
+
 .btn-todaypost{
     font-weight: bold;
     color:#ffffff;
