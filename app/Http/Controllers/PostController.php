@@ -14,7 +14,7 @@ class PostController extends Controller
     //一覧表示処理
     public function index()
     {
-        $posts = Record::all()->sortByDesc('created_at');
+        $posts = Record::paginate(5);
         $records = StudyRecord::get(['record_id'])->toArray();
 
         return view('post.post_index', compact('posts','records'));

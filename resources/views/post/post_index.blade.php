@@ -22,6 +22,7 @@
 
             @endforeach
 
+            {{ $posts->links() }}
     </div>
 
     <div class="btn-mypage">
