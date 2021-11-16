@@ -1,11 +1,12 @@
 # 勉強時間の記録サイト「studyaid」
 <img width="1179" alt="スクリーンショット 2021-11-15 23 31 38" src="https://user-images.githubusercontent.com/81844445/141799466-d84f89a4-01ef-446a-8b8c-4b2aaf8952ef.png">
 <br>
+
 ## 1.サイト概要
 
 Studyaid:[https://studyaid.work/](https://studyaid.work/)
 
-**Studyaid**は毎日の勉強時間を楽しく記録することができるサイトです。
+**Studyaid**(スタディエイド)は毎日の勉強時間を楽しく記録することができるサイトです。
 
 記録した学習時間はカレンダーで見ることができるので、自分がどのくらい勉強したのか一目瞭然。
 
