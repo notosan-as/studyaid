@@ -107,6 +107,7 @@ Studyaid:[https://studyaid.work/](https://studyaid.work/)
 学習内容は投稿ページに表示され、マイページのカレンダーにも勉強時間が反映されます。
 
 <br>
+
 - 投稿機能（CRUD 処理、ページネーション）
 <img width="1304" alt="スクリーンショット 2021-11-16 8 28 39" src="https://user-images.githubusercontent.com/81844445/141987645-1d82e35d-c5ca-463d-8c4b-e7b7bf937e31.png">
 みんなの今日の学習の投稿を見ることができます。
@@ -136,7 +137,7 @@ Studyaid:[https://studyaid.work/](https://studyaid.work/)
 <br>
 
 ## 作成者
-notosan-as:[Twitterアカウント](https://twitter.com/notosan_as)
+notosan_as:[Twitterアカウント](https://twitter.com/notosan_as)
 
 
 
