@@ -40,13 +40,12 @@ Studyaidは毎日の勉強時間を楽しく記録することができるサイ
 ### バックエンド
 - PHP
 - Laravel
-- SQL
+- PostgreSQL
 - composer
-- PHPUnit
 
 ### インフラ
-- Docker
-- AWS
+- Docker(開発環境)
+- AWS(VPC,EC2,RDS,IAM,ACM,Route53,EIP)
 
 ### その他
 - Git/GitHub
@@ -62,8 +61,14 @@ Studyaidは毎日の勉強時間を楽しく記録することができるサイ
 ## 5.機能一覧
 ### 基本機能
 - 勉強内容の設定
+<img width="1188" alt="スクリーンショット 2021-11-16 8 28 04" src="https://user-images.githubusercontent.com/81844445/141987674-254289ff-ad63-4ba4-ae84-b7796c770991.png">
+
 - 今日の学習の登録
+<img width="1188" alt="スクリーンショット 2021-11-16 8 28 25" src="https://user-images.githubusercontent.com/81844445/141987623-b274693c-7ebb-4019-84c7-4eb02e04310b.png">
+
 - 投稿機能
+<img width="1304" alt="スクリーンショット 2021-11-16 8 28 39" src="https://user-images.githubusercontent.com/81844445/141987645-1d82e35d-c5ca-463d-8c4b-e7b7bf937e31.png">
+
 
 ### 認証機能
 - ユーザー登録
