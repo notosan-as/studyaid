@@ -14,7 +14,7 @@
     <!-- Material Design Bootstrap -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.11/css/mdb.min.css" rel="stylesheet">
     <!-- original CSS -->
-    <link rel="stylesheet" href="{{ asset('/css/my-sheet.css',true) }}">
+    <link rel="stylesheet" href="{{ asset('/css/my-sheet.css',$is_production) }}">
 </head>
 
 <body>
@@ -32,7 +32,7 @@
     <!-- MDB core JavaScript -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.11/js/mdb.min.js"></script>
     <!-- original JavaScript -->
-    <script src="{{ asset('js/main.js',true) }}"></script>
+    <script src="{{ asset('js/main.js',$is_production) }}"></script>
 </body>
 
 </html>
