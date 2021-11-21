@@ -13,8 +13,14 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
     <!-- Material Design Bootstrap -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.11/css/mdb.min.css" rel="stylesheet">
+
     <!-- original CSS -->
-    <link rel="stylesheet" href="{{ asset('/css/my-sheet.css') }}">
+    @if(app('env')=='local')
+        <link rel="stylesheet" href="{{ asset('/css/my-sheet.css') }}">
+    @endif
+    @if(app('env')=='production')
+        <link rel="stylesheet" href="{{ secure_asset('/css/my-sheet.css') }}">
+    @endif
 </head>
 
 <body>
@@ -32,7 +38,13 @@
     <!-- MDB core JavaScript -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.11/js/mdb.min.js"></script>
     <!-- original JavaScript -->
-    <script src="{{ asset('js/main.js') }}"></script>
+    @if(app('env')=='local')
+        <script src="{{ asset('js/main.js') }}"></script>
+    @endif
+    @if(app('env')=='production')
+        <script src="{{ secure_asset('js/main.js') }}"></script>
+    @endif
+
 </body>
 
 </html>
