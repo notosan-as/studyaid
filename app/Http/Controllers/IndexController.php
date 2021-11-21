@@ -34,6 +34,12 @@ class IndexController extends Controller
 
         $dt = Carbon::now();
         $user = Auth::user();
+
+        if(empty($user)){
+            session()->flash('flash_message', 'セッションの有効期限が切れました、再度ログインしてください。');
+            return redirect('/login');
+        }
+
         $user_id = $user->id;
 
         $records = Record::all();
