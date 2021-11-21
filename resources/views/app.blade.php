@@ -15,10 +15,10 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.11/css/mdb.min.css" rel="stylesheet">
 
     <!-- original CSS -->
-    @if(app('env')=='local')
+    @if(config('app.env')=='local')
         <link rel="stylesheet" href="{{ asset('/css/my-sheet.css') }}">
     @endif
-    @if(app('env')=='production')
+    @if(config('app.env')=='production')
         <link rel="stylesheet" href="{{ secure_asset('/css/my-sheet.css') }}">
     @endif
 </head>
@@ -38,10 +38,10 @@
     <!-- MDB core JavaScript -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.11/js/mdb.min.js"></script>
     <!-- original JavaScript -->
-    @if(app('env')=='local')
+    @if(config('app.env')=='local')
         <script src="{{ asset('js/main.js') }}"></script>
     @endif
-    @if(app('env')=='production')
+    @if(config('app.env')=='production')
         <script src="{{ secure_asset('js/main.js') }}"></script>
     @endif
 
