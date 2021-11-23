@@ -1,31 +1,44 @@
-<nav class="navbar navbar-expand-md nav-color">
-<div class="container">
+<nav class="navbar navbar-expand-lg nav-color">
 
-    @guest
+@guest
     <a class="navbar-brand" href="/">Studyaid</a>
-    <div class="d-flex align-items-center">
-        <a class="btn btn-nav"
-        href="{{ route('login') }}" role="button">ログイン</a>
-        <a class="btn btn-post"
-        href="{{ route('register') }}" role="button">新規登録</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link nav-original" href="{{ route('login') }}">ログイン<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link nav-original-pink" href="{{ route('register') }}">新規登録</a>
+            </li>
+        </ul>
     </div>
-    @endguest
+@endguest
 
-    @auth
-    <a class="navbar-brand" href="/home">Studyaid</a>
-        <div class="d-flex align-items-center">
-            <form method="POST" action="{{ route('logout') }}">
+@auth
+<a class="navbar-brand" href="/">Studyaid</a>
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+</button>
+
+<div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+    <ul class="navbar-nav">
+        <li class="nav-item active">
+            <form method="post" name="form1" action="{{ route('logout') }}">
             @csrf
-            <button class="btn btn-nav" type="submit">
-            ログアウト
-            </button>
+                <a class="nav-link nav-original" href="javascript:form1.submit()">ログアウト<span class="sr-only">(current)</span></a>
             </form>
-        <a class="btn btn-nav" data-mdb-ripple-color="dark"　href="{{ route('mypage') }}" role="button">
-        <i class="fas fa-user-cog size"></i> 設定</a>
-        </div>
-    @endauth
-
+        </li>
+        <li class="nav-item">
+            <a class="nav-link nav-original" href="{{ route('mypage') }}"><i class="fas fa-user-cog"></i>設定</a>
+        </li>
+    </ul>
 </div>
+@endauth
+
 </nav>
 
 <!-- フラッシュメッセージ -->

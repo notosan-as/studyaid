@@ -1,3 +1,49 @@
+/* navのCSS */
+.nav-original {
+    display: inline-block;
+    border-radius: 3%;
+    font-size: 1em;
+    text-align: center;
+    cursor: pointer;
+    padding: 1px 1px;
+    margin:5px;
+    background: #fff7d6;
+    color: #76bacb;
+    line-height: 2em;
+    width:100px;
+    transition: .3s;
+    border: 2px solid #fff7d6;
+}
+.nav-original:hover {
+    color: #fff7d6;
+    background: #76bacb;
+}
+
+.nav-original-pink {
+    display: inline-block;
+    border-radius: 3%;
+    font-size: 1em;
+    text-align: center;
+    cursor: pointer;
+    padding: 1px 1px;
+    margin:5px;
+    background: #FFAFA3;
+    color: #FFF7D6;
+    line-height: 2em;
+    width:100px;
+    transition: .3s;
+    border: 2px solid #FFAFA3;
+}
+.nav-original-pink:hover {
+    color: #FFAFA3;
+    background: #76bacb;
+}
+
+.navbar-toggler .navbar-toggler-icon{
+    /* 三本線 */
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 247, 214, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='3' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
 /* ページ全体のCSS */
 body{
 	background-color:#fffdf5;
