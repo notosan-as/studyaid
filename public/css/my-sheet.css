@@ -71,7 +71,7 @@ body{
 
 .btn-right{
     text-align:right;
-    padding:0px 20px 0px 0px;
+    padding:0px 20px 10px 0px;
 }
 
 .flash{
@@ -426,26 +426,26 @@ section{
     display: inline-block;
 }
 
-
 .btn-todaypost{
-    font-weight: bold;
-    color:#ffffff;
-    border-radius: 50%;
-    line-height: 90px;
-    width: 90px;
-    height: 90px;
-    padding: 0;
-    -webkit-box-shadow: 0 5px 0 #eb9f94;
-    box-shadow: 0 5px 0 #eb9f94;
-    background-color:#FFAFA3;
+    display: inline-block;
+    padding: 0.8em 3em;
+    background-color: #FFAFA3;
+    box-shadow: 0 5px 0 #db8e84; /* 影の太さ・色 */
+    border-radius: 20px;
+    color: #fff;
+    cursor: pointer;
+    text-decoration: none;
+    font-size:0.9rem;
 }
 
 .btn-todaypost:hover {
-    color:#FFF7D6;
-    -webkit-transform: translate(0, 3px);
-    transform: translate(0, 3px);
-    -webkit-box-shadow: 0 2px 0 #eb9f94;
-    box-shadow: 0 2px 0 #eb9f94;
+    box-shadow: none;
+    transform: translateY(5px);
+}
+
+.btn-todaypost:active {
+    box-shadow: none;
+    transform: translateY(5px);
 }
 
 /* form部分のcss */
@@ -494,7 +494,62 @@ section{
     display: inline;
 }
 
-ページネーションのCSS
+.defaultlist
+,.defaultlist li{
+	padding:0px;
+	margin:0px;
+}
+
+.defaultlist li{
+	list-style-type:none !important;
+	list-style-image:none !important;
+	margin: 5px 0px 5px 0px !important;
+}
+
+.list4 li{
+	position:relative;
+	padding-left:20px;
+}
+
+.list4 li:after, .list4 li:before{
+	content:'';
+	display:block;
+	position:absolute;
+	top:4px;
+	left:8px;
+	height:11px;
+	width:4px;
+	background:#aaa;
+	border-radius:10px;
+	transform:rotate(45deg);
+	-webkit-transform:rotate(45deg);
+	-o-transform:rotate(45deg);
+}
+.list4 li:before{
+	top:8px;
+	left:3px;
+	height:8px;
+	transform:rotate(-45deg);
+	-webkit-transform:rotate(-45deg);
+	-o-transform:rotate(-45deg);
+}
+
+.post-header{
+    background-color:#EFDAB1;
+    color:#736345;
+
+}
+
+.post-footer{
+    background-color:#FFFFFF;
+}
+
+.post-card{
+    margin-bottom:10px;
+}
+
+
+/* ページネーションのCSS */
 .paginationWrap {
     display: flex;
     justify-content: center;

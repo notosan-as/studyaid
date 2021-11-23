@@ -1,17 +1,7 @@
-
-    <div class="card mt-3">
-        <div class="card-body d-flex flex-row">
-            <div class="form-post">
-                <div class="font-weight-bold">
-                    <i class="fas fa-user-circle"></i>
-                    {{ $post->user->getData() }}
-                    </div>
-                    <div class="font-weight-lighter">
-                    {{ $post->created_at->format('Y/m/d H:i') }}
-                    </div>
-                </div>
-
-                @if( Auth::id() === $post->user_id )
+<div class="card post-card">
+    <div class="card-header font-weight-bold post-header d-flex flex-row align-items-center">
+    <i class="fas fa-user-circle"></i> {{ $post->user->getData() }}　/　{{ $post->created_at->format('Y/m/d H:i') }}
+    @if( Auth::id() === $post->user_id )
                 <!-- dropdown -->
                 <div class="ml-auto card-text">
                     <div class="dropdown">
@@ -56,11 +46,8 @@
             </div>
             <!-- modal -->
             @endif
-        </div>
-
-        <div class="card-body">
-            <div class="card-text card-memo">
-                {!! nl2br(e($post->memo)) !!}
-            </div>
-        </div>
     </div>
+    <div class="card-footer post-footer">
+        {!! nl2br(e($post->memo)) !!}
+    </div>
+</div>
