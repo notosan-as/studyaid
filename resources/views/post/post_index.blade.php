@@ -7,7 +7,7 @@
     @include('nav')
 
     <div class="btn-right">
-        <a href="{{ route('post.create') }}" class="btn btn-todaypost"><i class="fas fa-pen-nib size"></i> 投稿する</a>
+        <a href="{{ route('post.create') }}" class="btn btn-todaypost"><i class="fas fa-pen-nib"></i> 投稿する</a>
     </div>
 
     <div class="container">

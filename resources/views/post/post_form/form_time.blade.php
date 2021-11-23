@@ -1,6 +1,6 @@
 <div class="card post-card">
     <div class="card-header font-weight-bold post-header d-flex flex-row align-items-center">
-    <i class="fas fa-user-circle"></i> {{ $post->user->getData() }}　/　{{ $post->created_at->format('Y/m/d H:i') }}
+    <i class="fas fa-user-circle"></i> {{ $post->user->getData() }}/{{ $post->created_at->format('Y/m/d H:i') }}
     @if( Auth::id() === $post->user_id )
     <!-- dropdown -->
         <div class="ml-auto card-text">

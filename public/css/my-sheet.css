@@ -428,7 +428,6 @@ section{
 
 .btn-todaypost{
     display: inline-block;
-    padding: 0.8em 3em;
     background-color: #FFAFA3;
     box-shadow: 0 5px 0 #db8e84; /* 影の太さ・色 */
     border-radius: 20px;
@@ -436,11 +435,16 @@ section{
     cursor: pointer;
     text-decoration: none;
     font-size:0.9rem;
+    width:150px;
+    height:40px;
+    padding:10px 0px 0px 0px;;
+
 }
 
 .btn-todaypost:hover {
     box-shadow: none;
     transform: translateY(5px);
+    color: #fff;
 }
 
 .btn-todaypost:active {
