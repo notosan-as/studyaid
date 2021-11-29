@@ -6,22 +6,32 @@
 @section('content')
     @include('nav')
 
-<div class="container">
+<div class="container post-show">
+    <div class="card post-card">
+        <div class="card-header font-weight-bold post-header d-flex flex-row align-items-center">
+            <i class="fas fa-user-circle"></i> {{ $post->user->getData() }}/{{ $post->created_at->format('Y/m/d H:i') }}
+        </div>
 
-    <!-- 学習時間の投稿があるか判定 -->
-    @if( in_array ( $post->id, array_column( $records, 'record_id' )))
-        @include('post.post_form.form_time')
-    @else
-        @include('post.post_form.form_only')
-    @endif
+        @if($studies)
+        <div class="card-body">
+            <ul class="defaultlist list4">
+            @foreach( $studies as $study )
+                <li>{{ $study->item->item }}　-　{{ $study->time }}分</li>
+            @endforeach
+            </ul>
+        </div>
+        @endif
 
-</div>
-
-    <div class="btn-mypage">
-        <a href="{{ route('post.create') }}" class="btn btn-post">投稿する</a>
+        <div class="card-footer post-footer">
+            {!! nl2br(e($post->memo)) !!}
+        </div>
+            @include('post.comment.post_comment')
     </div>
+
     <div class="btn-mypage">
         <a href="/home" class="btn btn-home">マイページに戻る</a>
     </div>
+</div>
     @include('foot')
+
 @endsection

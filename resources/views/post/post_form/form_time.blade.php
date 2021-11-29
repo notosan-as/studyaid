@@ -29,4 +29,7 @@
     <div class="card-footer post-footer">
         {!! nl2br(e($post->memo)) !!}
     </div>
+    <ul class="comment">
+    <li><a href="{{ route('post.show',['post' => $post]) }}" class="btn-comment">コメント：{{ $post->comments->count() }}件</a></li>
+    </ul>
 </div>

@@ -30,6 +30,7 @@ Route::get('/home','IndexController@index');
 Route::resource('/study','RecordController')->middleware('auth');
 Route::resource('/setup','SetupController')->middleware('auth');
 Route::resource('/post','PostController')->middleware('auth');
+Route::resource('/comment','CommentsController',['only' => ['store']])->middleware('auth');
 
 Route::prefix('post')->name('post.')->group(function () {
     Route::put('/{post}/like', 'PostController@like')->name('like')->middleware('auth');

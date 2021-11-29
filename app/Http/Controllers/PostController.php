@@ -36,12 +36,17 @@ class PostController extends Controller
         session()->flash('flash_message', '投稿が完了しました');
 
         return redirect()->route('post.index');
-
     }
 
     //個別表示
     public function show($id)
     {
+        $post = Record::find($id);
+        $query = StudyRecord::query();
+        $query->where('record_id',$id);
+        $studies = $query->get();
+
+        return view('post.post_show', compact('post','studies'));
     }
 
     //編集画面表示
