@@ -1,5 +1,5 @@
 # 勉強時間の記録サイト「studyaid」
-<img width="1179" alt="スクリーンショット 2021-11-15 23 31 38" src="https://user-images.githubusercontent.com/81844445/141799466-d84f89a4-01ef-446a-8b8c-4b2aaf8952ef.png">
+<img width="1205" alt="スクリーンショット 2021-11-29 23 41 45" src="https://user-images.githubusercontent.com/81844445/143888157-32240649-0f7f-4773-92ed-44d9199063ec.png">
 <br>
 
 ## 1.サイト概要
@@ -10,7 +10,7 @@ Studyaid:[https://studyaid.work/](https://studyaid.work/)
 
 記録した学習時間はカレンダーで見ることができるので、自分がどのくらい勉強したのか一目瞭然。
 
-<img width="1188" alt="スクリーンショット 2021-11-15 23 32 57" src="https://user-images.githubusercontent.com/81844445/141800280-1a31ec82-ae84-47d7-87a4-cf43e88095af.png">
+<img width="1205" alt="スクリーンショット 2021-11-29 23 41 35" src="https://user-images.githubusercontent.com/81844445/143888207-a7b0ebd8-51a8-4f43-af30-79b13142cf54.png">
 <br>
 
 小学生と中学生の子どもがいるシングルマザーです。
@@ -87,19 +87,19 @@ Studyaid:[https://studyaid.work/](https://studyaid.work/)
 
 ## 4.ER図
 
-![studyaid-er](https://user-images.githubusercontent.com/81844445/141800197-b4a5721a-3e69-47f8-aafc-9b2bbbfd5ba9.png)
+![Untitled](https://user-images.githubusercontent.com/81844445/143890483-f6809108-2dbb-433a-999c-df8f8db46a5c.png)
 
 <br>
 
 ## 5.機能一覧
 ### 基本機能
 - 勉強内容の設定（CRUD 処理）
-<img width="1188" alt="スクリーンショット 2021-11-16 8 28 04" src="https://user-images.githubusercontent.com/81844445/141987674-254289ff-ad63-4ba4-ae84-b7796c770991.png">
+<img width="1383" alt="スクリーンショット 2021-11-29 23 48 06" src="https://user-images.githubusercontent.com/81844445/143889138-cb66f279-9bd2-4ed2-99b7-3772a104a64a.png">
 記録したい学習内容を設定できます。
 <br><br>
 
 - 今日の学習の登録（CRUD 処理）
-<img width="1188" alt="スクリーンショット 2021-11-16 8 28 25" src="https://user-images.githubusercontent.com/81844445/141987623-b274693c-7ebb-4019-84c7-4eb02e04310b.png">
+<img width="1376" alt="スクリーンショット 2021-11-29 23 47 49" src="https://user-images.githubusercontent.com/81844445/143889085-8a01e5a1-212d-4e99-b374-3180970a35a7.png">
 今日どのくらい勉強をしたのかを入力できます。
 
 メモがある場合は、メモも記入することができます。
@@ -109,10 +109,13 @@ Studyaid:[https://studyaid.work/](https://studyaid.work/)
 <br>
 
 - 投稿機能（CRUD 処理、ページネーション）
-<img width="1304" alt="スクリーンショット 2021-11-16 8 28 39" src="https://user-images.githubusercontent.com/81844445/141987645-1d82e35d-c5ca-463d-8c4b-e7b7bf937e31.png">
+<img width="1379" alt="スクリーンショット 2021-11-29 23 48 19" src="https://user-images.githubusercontent.com/81844445/143889147-c5867cce-fbc9-45b6-a3c3-fcaff105225b.png">
 みんなの今日の学習の投稿を見ることができます。
 
 メモだけの投稿をすることもできます。
+
+- コメント機能（11/29追加）
+<img width="1205" alt="スクリーンショット 2021-11-29 23 41 17" src="https://user-images.githubusercontent.com/81844445/143888176-97c95a4f-1dfe-4ed5-9bb1-dd144909172d.png">
 
 <br>
 
@@ -127,7 +130,6 @@ Studyaid:[https://studyaid.work/](https://studyaid.work/)
 <br>
 
 ## 6.今後の実装したいもの
-- 投稿へのコメント機能
 - レスポンシブ対応
 - 画像投稿機能
 - 他ユーザーの学習状況の確認
@@ -138,6 +140,7 @@ Studyaid:[https://studyaid.work/](https://studyaid.work/)
 
 ## 作成者
 notosan_as:[Twitterアカウント](https://twitter.com/notosan_as)
+
 
 
 
